@@ -53,7 +53,7 @@
     fetch(markdownUrl)
       .then(response => response.text())
       .then(text => {
-        const html = marked(text);
+        const html = marked.parse(text);
         document.getElementById(elementId).innerHTML = html;
       });
   }
